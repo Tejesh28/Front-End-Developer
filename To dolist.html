@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #1d2630;
+        }
+       h1{
+         color: aliceblue;
+        text-align: center;
+        font-size: 60px;
+        font-family: algerian;
+
+       }
+       p{
+        color:crimson;
+        text-align: center;
+        font-size: 40px;
+        
+        
+       }
+       input{
+           font-size: 30px;
+           background-color: aliceblue;
+           border: 1px solid;
+           border-radius: 20px;
+           position: sticky;
+           width: 80rem;
+           height: 60px;
+           
+       }
+       #btn{
+        background-color: cornflowerblue;
+        border: 1px solid;
+        border-radius: 10px;
+        width: 10rem;
+        height: 65px;
+        font-size: 20px;
+       }
+       li{
+           list-style: none;
+           color: aliceblue;
+           font-size: 40px;
+           width: 75%;
+           margin: 10px;
+           padding: 20px;
+           background-color: aqua;
+           border: 1PX solid black;
+           border-radius: 10px;
+       }
+       span{
+         color: orangered;
+       }
+
+
+
+
+
+    </style>
+</head>
+<body>
+<h1>TODO<span>LIST</span></h1>
+
+<p>Enter text into the input field to add items to your list.</p>
+<div>
+<input type="text"placehloder="Enter Name" id="input">
+<button id="btn" onclick="remove()">Remove</button>
+<ul id="item"></ul>
+</div>
+<script>
+
+const a1= document.getElementById('input')
+const a2= document.getElementById('btn')
+const a3= document.getElementById('item')
+
+    a1.addEventListener('keypress',myfunction)
+
+    function myfunction(e){
+        
+    if(e.code === 'Enter' && e.target.value !==" "){
+        let z=e.target.value
+
+        let item=document.createElement('li')//<li><label></label></li>
+        item.innerHTML = `<label>${z}</label>`;
+    a3.appendChild(item) 
+    a1.valu=''   
+    }
+    }
+
+    function remove(){
+        const a3=document.getElementsByTagName('ul');
+       a3[0].innerHTML=''
+    }
+
+
+
+
+
+
+
+</script>
+
+    
+</body>
+</html>

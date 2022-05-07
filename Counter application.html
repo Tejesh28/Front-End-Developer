@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increment,Decrement,Reset</title>
+    <style>
+        body{
+            background-color:darkgray;
+        }
+
+        .container{
+            color:crimson;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 85%;
+            margin: 70px;
+            font-size: 30px;
+    
+        }
+        span{
+            font-size: 130px;
+            padding: 10px;
+            color:black
+        }
+        .btn{
+            background-color:orangered;
+            color:white;
+            font-size: 40px;
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 15px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>counter</h1>
+        <h1>Application</h1>
+        <span id="counter">0</span>
+        <div class="btn-container">
+            
+        <button class="btn Increment" onclick="a()">Increment</button>
+       
+        <button class="btn Decrement" onclick="u()">Decrement</button>
+
+        <button class="btn Reset" onclick="c()">Reset</button>
+
+        </div>
+    </div>
+    <script>
+          
+       //buttons and counter text
+     
+      
+
+    //    function a() {
+    //     const counter=document.querySelector('#counter').innerHTML
+    //     let value= parseInt(counter) + 1
+    //     document.querySelector('#counter').innerHTML=value
+
+           
+    //    }
+    //    function b() {
+    //     const counter=document.querySelector('#counter').innerHTML
+    //     let value= parseInt(counter) - 1
+    //     document.querySelector('#counter').innerHTML=value
+
+           
+    //    }
+    //    function c() {
+    //     document.querySelector('#counter').innerHTML=0
+    //    }
+
+     let b=0;
+    function a() {
+        b=b+1;
+        document.getElementById('counter').innerHTML=b;
+
+           
+       }
+    
+       function u() {
+        b=b-1;
+        document.getElementById('counter').innerHTML=b;
+
+           
+       }
+       function c() {
+        b=0;
+        document.getElementById('counter').innerHTML=b;
+
+           
+       }
+    </script>
+</body>
+</html>
